@@ -1,0 +1,17 @@
+<h1>Giphy Search</h1>
+<form method="GET" action="/random">
+  Search Term :
+  <input type="text" name="term">
+  <br><br>
+  No. of Results :
+  <input type="number" name="count">
+  <br><br>
+  <button type="submit">Search</button>
+</form>
+
+<h1>Search result for {{term}}</h1>
+  {{#each images}}
+  {{this}}
+  <img src="{{this}}" alt="">
+  <br>
+  {{/each}}
